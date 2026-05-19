@@ -1,0 +1,1261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#1a1612" />
+<title>Shubham — 12-Week Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a1612;
+    --bg-2: #221d18;
+    --bg-3: #2b2520;
+    --ink: #f1ebe1;
+    --ink-2: #c9bfb1;
+    --ink-3: #8a8276;
+    --line: #3a3128;
+    --gold: #d4a857;
+    --gold-soft: #b8924a;
+    --rust: #c25c3a;
+    --rust-soft: #e87a55;
+    --green: #87a96b;
+    --serif: 'Instrument Serif', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 90px;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(212, 168, 87, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(194, 92, 58, 0.03) 0%, transparent 50%);
+  }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(26, 22, 18, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+    padding: 12px 18px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  header .brand {
+    font-family: var(--serif);
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    font-style: italic;
+    color: var(--gold);
+  }
+  header .week-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    padding: 4px 8px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Container */
+  main { max-width: 720px; margin: 0 auto; padding: 0 18px; }
+
+  /* Hero */
+  .hero {
+    padding: 36px 0 28px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(38px, 9vw, 64px);
+    line-height: 0.95;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 em { color: var(--gold); font-style: italic; }
+  .hero p {
+    color: var(--ink-2);
+    font-size: 16px;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  /* Stats grid */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 28px 0;
+  }
+  .stat {
+    padding: 16px 14px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .stat .k {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .stat .v {
+    font-family: var(--serif);
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .stat .target {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold-soft);
+    margin-top: 4px;
+  }
+
+  /* Section heading */
+  section { padding: 36px 0; border-bottom: 1px solid var(--line); }
+  section:last-child { border-bottom: none; }
+  .sect-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 6vw, 44px);
+    line-height: 1.05;
+    margin: 0 0 24px;
+    letter-spacing: -0.015em;
+  }
+  h2 em { color: var(--gold); font-style: italic; }
+  h3 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 17px;
+    margin: 20px 0 10px;
+    letter-spacing: -0.01em;
+  }
+  h4 {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin: 24px 0 10px;
+  }
+
+  p { color: var(--ink-2); margin: 0 0 14px; }
+  p strong, li strong { color: var(--ink); font-weight: 600; }
+  em { color: var(--gold-soft); font-style: italic; }
+
+  ul { padding-left: 20px; margin: 0 0 16px; }
+  li { color: var(--ink-2); margin-bottom: 8px; }
+  li::marker { color: var(--gold); }
+
+  /* Alert / Note boxes */
+  .alert {
+    background: rgba(194, 92, 58, 0.08);
+    border-left: 3px solid var(--rust);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+  }
+  .alert .alert-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--rust-soft);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .alert p:last-child { margin-bottom: 0; }
+
+  .note {
+    background: rgba(135, 169, 107, 0.08);
+    border-left: 3px solid var(--green);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+  }
+  .note .alert-title { color: var(--green); }
+
+  /* Day cards */
+  .day {
+    margin: 14px 0;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .day:hover { border-color: var(--gold-soft); }
+  .day-head {
+    padding: 18px 18px 16px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .day-head-left { flex: 1; }
+  .day-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .day-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .day-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    margin-top: 6px;
+  }
+  .chev {
+    font-size: 18px;
+    color: var(--ink-3);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .day.open .chev { transform: rotate(180deg); color: var(--gold); }
+
+  .day-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .day.open .day-body { max-height: 2400px; }
+
+  .day-body-inner { padding: 4px 18px 18px; }
+
+  /* Exercise row */
+  .ex {
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+  }
+  .ex:first-child { border-top: 1px solid var(--line); }
+  .ex-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .ex-name {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.3;
+  }
+  .ex-reps {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    padding: 4px 8px;
+    background: rgba(212, 168, 87, 0.08);
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .ex-note {
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .ex-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    text-decoration: none;
+    padding: 6px 12px;
+    background: rgba(212, 168, 87, 0.06);
+    border: 1px solid rgba(212, 168, 87, 0.2);
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.2s;
+  }
+  .ex-link:hover, .ex-link:active {
+    background: rgba(212, 168, 87, 0.15);
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+  .ex-link::before {
+    content: '▶';
+    font-size: 9px;
+    color: var(--rust-soft);
+  }
+
+  .ex.finisher {
+    background: rgba(212, 168, 87, 0.04);
+    border-radius: 8px;
+    margin: 8px -10px 0;
+    padding: 12px 10px;
+    border-top: none;
+  }
+  .ex.finisher .ex-name::before {
+    content: 'FINISHER · ';
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  /* Meal timeline */
+  .timeline { margin: 16px 0; }
+  .meal {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+  }
+  .meal:first-child { border-top: none; }
+  .meal-time {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 600;
+    padding-top: 2px;
+  }
+  .meal-content { color: var(--ink-2); font-size: 15px; }
+  .meal-content strong { color: var(--ink); }
+  .meal-macros {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    margin-top: 4px;
+  }
+
+  /* Week ladder */
+  .ladder {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .rung {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    align-items: center;
+  }
+  .rung.current { border-color: var(--rust); }
+  .rung.target { border-color: var(--gold); background: rgba(212, 168, 87, 0.04); }
+  .rung-week {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .rung-val {
+    font-family: var(--serif);
+    font-size: 18px;
+  }
+  .rung-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    letter-spacing: 0.08em;
+  }
+
+  /* Daily schedule cards */
+  .schedule { display: grid; gap: 10px; margin-top: 16px; }
+  .slot {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 14px;
+    padding: 12px 14px;
+    background: var(--bg-2);
+    border-radius: 8px;
+    border: 1px solid var(--line);
+  }
+  .slot-time {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+  .slot-action { color: var(--ink-2); font-size: 14px; line-height: 1.4; }
+  .slot-action strong { color: var(--ink); }
+
+  /* Bottom nav */
+  nav.bottom {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(26, 22, 18, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--line);
+    padding: 10px 8px calc(10px + env(safe-area-inset-bottom));
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+  }
+  nav.bottom a {
+    flex: 1;
+    text-align: center;
+    padding: 6px 4px;
+    text-decoration: none;
+    color: var(--ink-3);
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  nav.bottom a .icon {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 2px;
+    line-height: 1;
+  }
+  nav.bottom a:active, nav.bottom a:hover {
+    color: var(--gold);
+    background: rgba(212, 168, 87, 0.06);
+  }
+
+  /* Misc */
+  .divider {
+    height: 1px;
+    background: var(--line);
+    margin: 24px 0;
+  }
+  .pull-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.3;
+    color: var(--ink);
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin: 28px 0;
+    text-align: center;
+  }
+  .pull-quote em { color: var(--gold); }
+
+  /* Lab grid */
+  .lab-grid { display: grid; gap: 8px; margin: 16px 0; }
+  .lab-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 12px;
+    padding: 12px 14px;
+    background: var(--bg-2);
+    border-radius: 8px;
+    border-left: 3px solid var(--line);
+    align-items: center;
+  }
+  .lab-item.bad { border-left-color: var(--rust); }
+  .lab-item.warn { border-left-color: var(--gold); }
+  .lab-item.ok { border-left-color: var(--green); }
+  .lab-name { font-weight: 600; font-size: 14px; }
+  .lab-value {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .lab-norm {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+  }
+  .lab-meaning {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    color: var(--ink-3);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* Tap pulse for first exercise hint */
+  @keyframes pulseHint {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+  }
+
+  /* Print styling */
+  @media print {
+    body { color: #000; background: #fff; padding: 0; }
+    header, nav.bottom { display: none; }
+    .day-body { max-height: none !important; }
+    .ex-link { display: none; }
+  }
+
+  @media (min-width: 720px) {
+    .stats { grid-template-columns: repeat(5, 1fr); }
+    .meal { grid-template-columns: 80px 1fr; }
+    .slot { grid-template-columns: 100px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">12-week plan.</div>
+  <div class="week-tag">Foundation · Wk 1</div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero" id="top">
+    <div class="label">Personal plan · Shubham</div>
+    <h1>The body you had at <em>78kg</em> is still inside this one.</h1>
+    <p>Twelve weeks of disciplined training, honest food, and earlier sleep. Lighter weights, longer cardio, smarter recovery. No bulk, no isolation work, no shortcuts. Just fat loss with muscle preserved.</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="k">Weight</div>
+      <div class="v">105<span style="font-size:14px;color:var(--ink-3)">kg</span></div>
+      <div class="target">→ 95kg by wk12</div>
+    </div>
+    <div class="stat">
+      <div class="k">Waist</div>
+      <div class="v">128<span style="font-size:14px;color:var(--ink-3)">cm</span></div>
+      <div class="target">→ 115cm</div>
+    </div>
+    <div class="stat">
+      <div class="k">BMI</div>
+      <div class="v">33.9</div>
+      <div class="target">→ 30.7</div>
+    </div>
+    <div class="stat">
+      <div class="k">ALT</div>
+      <div class="v">72</div>
+      <div class="target">→ &lt;50</div>
+    </div>
+    <div class="stat">
+      <div class="k">Glucose</div>
+      <div class="v">107</div>
+      <div class="target">→ &lt;100</div>
+    </div>
+  </div>
+
+  <!-- MEDICAL -->
+  <section id="medical">
+    <div class="sect-num">01 · MEDICAL</div>
+    <h2>Your labs, decoded.</h2>
+    <p>Five red flags in your panel. None are catastrophic on their own. Together, they describe <em>early metabolic syndrome</em> — a state that's fully reversible at 32 if you act now.</p>
+
+    <div class="lab-grid">
+      <div class="lab-item bad">
+        <span class="lab-name">Vitamin D</span>
+        <span class="lab-value">8 ng/mL</span>
+        <span class="lab-norm">need 30+</span>
+        <div class="lab-meaning">Severe deficiency. Affects energy, mood, recovery. Doctor must prescribe correct dose.</div>
+      </div>
+      <div class="lab-item bad">
+        <span class="lab-name">ALT (SGPT)</span>
+        <span class="lab-value">72 U/L</span>
+        <span class="lab-norm">max 50</span>
+        <div class="lab-meaning">Likely fatty liver (NAFLD). The single most reversible item in your panel.</div>
+      </div>
+      <div class="lab-item warn">
+        <span class="lab-name">Fasting Glucose</span>
+        <span class="lab-value">107 mg/dL</span>
+        <span class="lab-norm">max 100</span>
+        <div class="lab-meaning">Pre-diabetic. You have a window to fully reverse this before progression.</div>
+      </div>
+      <div class="lab-item warn">
+        <span class="lab-name">LDL Cholesterol</span>
+        <span class="lab-value">154</span>
+        <span class="lab-norm">max 100</span>
+        <div class="lab-meaning">High. Plus HDL (35) is low. Cardiovascular risk profile.</div>
+      </div>
+      <div class="lab-item warn">
+        <span class="lab-name">hs-CRP</span>
+        <span class="lab-value">2.32 mg/L</span>
+        <span class="lab-norm">max 1.0</span>
+        <div class="lab-meaning">Chronic low-grade inflammation. Will drop as fat reduces.</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <div class="alert-title">⚠ Do not self-medicate Vit D</div>
+      <p>You bought 60,000 IU A-Z tablets. <strong>Do not start yet.</strong> Wrong dosing causes toxicity. Book a Practo or Apollo 24/7 video consult (₹299–499) this week. Show them the lab. Get the protocol in writing. Then begin.</p>
+    </div>
+
+    <div class="note">
+      <div class="alert-title">✓ Safe to start now</div>
+      <p>B12 methylcobalamin 1000 mcg sublingual daily. Omega-3 fish oil 2g EPA+DHA daily. Creatine monohydrate 5g daily. These are all safe without prescription.</p>
+    </div>
+  </section>
+
+  <!-- TRAINING PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="sect-num">02 · TRAINING PHILOSOPHY</div>
+    <h2>Lifting <em>without</em> getting bulky.</h2>
+    <p>You said you don't want big arms, heavy weights, or a gym-rat physique. <strong>You won't get any of that on this plan</strong> — building muscle requires calorie surplus, years of heavy training, and high protein. You're in a deficit. Your body literally cannot build significant muscle right now.</p>
+
+    <p>What lifting actually does for you:</p>
+    <ul>
+      <li><strong>Preserves the muscle you already have</strong> while you lose fat. Without it, 25% of weight lost is muscle — leaves you skinny-fat with slower metabolism.</li>
+      <li><strong>Burns calories during AND after</strong> — strength training elevates metabolism for 24-48 hrs post-session.</li>
+      <li><strong>Fixes your L4-L5 pain</strong> by strengthening glutes and core (the real root cause).</li>
+    </ul>
+
+    <h4>What I changed in your plan</h4>
+    <ul>
+      <li><strong>Lighter weights, higher reps (12-15)</strong> — builds endurance and "tone" without bulk</li>
+      <li><strong>Removed: biceps curls, triceps pushdowns</strong> — the only true "vanity" exercises, you don't need them</li>
+      <li><strong>More cardio time</strong> — finishers are now 15-25 min instead of 15</li>
+      <li><strong>Big compound moves emphasised</strong> — they burn more calories per minute than isolation</li>
+      <li><strong>Face pulls stayed</strong> — these aren't for biceps, they're for desk-job posture</li>
+    </ul>
+  </section>
+
+  <!-- GYM PLAN -->
+  <section id="gym">
+    <div class="sect-num">03 · TRAINING</div>
+    <h2>Five days, sixty minutes.</h2>
+    <p>Tap any exercise to open a YouTube form tutorial. Start light. Add weight only when 15 reps feels easy with 2 reps in reserve.</p>
+
+    <div class="note">
+      <div class="alert-title">⚠ Back-safe protocol (your L4-L5)</div>
+      <p>No Romanian Deadlifts. No barbell squats. No bent-over rows. All replacements are machine-based or supported. <strong>Do the 5-min daily back protocol below every morning</strong> — non-negotiable.</p>
+    </div>
+
+    <h4>Session structure (every day)</h4>
+    <ul>
+      <li><strong>5 min</strong> warm-up (incline walk)</li>
+      <li><strong>30-35 min</strong> strength (5 exercises, 3 sets each, 60-90 sec rest)</li>
+      <li><strong>20-25 min</strong> cardio finisher (steady-state, HR 120-140)</li>
+      <li><strong>3 min</strong> stretch</li>
+    </ul>
+
+    <!-- DAY 1 -->
+    <div class="day open">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-head-left">
+          <div class="day-num">Day 1 · Monday</div>
+          <div class="day-title">Upper Push</div>
+          <div class="day-meta">Chest + Shoulders · No triceps isolation</div>
+        </div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Machine Chest Press</span><span class="ex-reps">3 × 12-15</span></div>
+          <div class="ex-note">Light weight, controlled. Squeeze chest at top.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=machine+chest+press+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Incline Dumbbell Press</span><span class="ex-reps">3 × 12</span></div>
+          <div class="ex-note">30° bench. Light dumbbells. Don't ego-lift.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=incline+dumbbell+press+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Seated Shoulder Press (machine)</span><span class="ex-reps">3 × 12-15</span></div>
+          <div class="ex-note">Back fully supported. Press straight up.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=seated+machine+shoulder+press+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Cable Lateral Raise</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Very light. Form over weight. Slight forward lean.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=cable+lateral+raise+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Pec Deck (machine fly)</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Replaces triceps work. Squeeze chest, slow.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=pec+deck+machine+fly+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex finisher">
+          <div class="ex-top"><span class="ex-name">Incline walk 12% @ 5 km/h</span><span class="ex-reps">25 min</span></div>
+          <div class="ex-note">Treadmill. Steady. HR 120-140. Can talk, not sing.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-head-left">
+          <div class="day-num">Day 2 · Tuesday</div>
+          <div class="day-title">Lower — Quads</div>
+          <div class="day-meta">Big movers · Most calories burned</div>
+        </div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Leg Press</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Feet shoulder-width, mid-platform. Full range.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=leg+press+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Hack Squat Machine</span><span class="ex-reps">3 × 12</span></div>
+          <div class="ex-note">Back fully supported. Safer than barbell squat for your L4-L5.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=hack+squat+machine+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Bodyweight Walking Lunges</span><span class="ex-reps">3 × 10 each</span></div>
+          <div class="ex-note">No weight first 4 weeks. Knee tracks over toe.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=walking+lunges+bodyweight+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Leg Extension</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Quad isolation. Light weight, full squeeze at top.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=leg+extension+machine+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Standing Calf Raise</span><span class="ex-reps">3 × 15-20</span></div>
+          <div class="ex-note">Full stretch at bottom, hold 1 sec at top.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=standing+calf+raise+machine+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex finisher">
+          <div class="ex-top"><span class="ex-name">Stationary Cycle</span><span class="ex-reps">20 min</span></div>
+          <div class="ex-note">Medium resistance. Sustainable pace.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-head-left">
+          <div class="day-num">Day 3 · Wednesday</div>
+          <div class="day-title">Upper Pull</div>
+          <div class="day-meta">Back + Posture · No biceps isolation</div>
+        </div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Lat Pulldown (wide grip)</span><span class="ex-reps">3 × 12-15</span></div>
+          <div class="ex-note">Pull to upper chest. Squeeze shoulder blades down.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=lat+pulldown+wide+grip+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Seated Cable Row</span><span class="ex-reps">3 × 12-15</span></div>
+          <div class="ex-note">Chest up, no rounding back. Pull to belly button.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=seated+cable+row+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Chest-Supported Machine Row</span><span class="ex-reps">3 × 12-15</span></div>
+          <div class="ex-note">Replaces bent-over row. Spine fully protected.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=chest+supported+row+machine+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Face Pulls (rope)</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">CRITICAL for your desk-job posture. Pull rope to face.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=face+pulls+rope+cable+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Reverse Pec Deck (rear delt fly)</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Replaces dumbbell curls. Better for posture.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=reverse+pec+deck+rear+delt+fly+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex finisher">
+          <div class="ex-top"><span class="ex-name">Rowing Machine</span><span class="ex-reps">20 min</span></div>
+          <div class="ex-note">Easy sustainable pace. Drive with legs first.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=rowing+machine+proper+form+technique" target="_blank" rel="noopener">Watch form</a>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-head-left">
+          <div class="day-num">Day 4 · Thursday</div>
+          <div class="day-title">Lower — Hams & Glutes</div>
+          <div class="day-meta">Posterior chain · Back-safe</div>
+        </div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Lying Leg Curl</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Replaces RDL. Same muscles, zero spinal load.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=lying+leg+curl+machine+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Cable Pull-Through (light)</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Hip hinge, NEUTRAL spine. Light weight only.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=cable+pull+through+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Hip Thrust Machine</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Glute focus. Squeeze hard at top for 1 sec.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=hip+thrust+machine+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Seated Leg Curl</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Different angle than lying curl. Hamstring isolation.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=seated+leg+curl+machine+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Glute Kickback (cable)</span><span class="ex-reps">3 × 15 each</span></div>
+          <div class="ex-note">Bent over slightly, kick leg straight back.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=cable+glute+kickback+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex finisher">
+          <div class="ex-top"><span class="ex-name">Incline Walk 12% @ 5 km/h</span><span class="ex-reps">20 min</span></div>
+          <div class="ex-note">Treadmill. Burns surprising amount of fat.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-head-left">
+          <div class="day-num">Day 5 · Friday</div>
+          <div class="day-title">Full Body + Cardio</div>
+          <div class="day-meta">Lighter strength, longer cardio</div>
+        </div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Leg Press</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Lighter than Tuesday. This is endurance, not strength.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=leg+press+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Incline Push-up (hands on bench)</span><span class="ex-reps">3 × 10-15</span></div>
+          <div class="ex-note">Higher bench = easier. Lower bench = harder.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=incline+push+up+bench+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Lat Pulldown</span><span class="ex-reps">3 × 15</span></div>
+          <div class="ex-note">Light, controlled, full range.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=lat+pulldown+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Plank</span><span class="ex-reps">3 × 30 sec</span></div>
+          <div class="ex-note">Build to 60 sec over weeks. Don't let hips sag.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=proper+plank+form+tutorial" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Side Plank</span><span class="ex-reps">2 × 20-30 sec each</span></div>
+          <div class="ex-note">CRITICAL for L4-L5 stability. Stack hips.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=side+plank+proper+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Dead Bug</span><span class="ex-reps">3 × 8 each side</span></div>
+          <div class="ex-note">Core + spine protection. Press low back into floor.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=dead+bug+exercise+proper+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex finisher">
+          <div class="ex-top"><span class="ex-name">Cycle Intervals · 1 min hard / 1 min easy</span><span class="ex-reps">25 min</span></div>
+          <div class="ex-note">12 rounds total. Hard = breathless. Easy = catch breath.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-head-left">
+          <div class="day-num">Day 6 · Saturday</div>
+          <div class="day-title">Active Recovery</div>
+          <div class="day-meta">Outdoor cardio · No gym</div>
+        </div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Brisk Walk Outdoors</span><span class="ex-reps">45-60 min</span></div>
+          <div class="ex-note">Cubbon Park, Lalbagh, or your apartment loop. Pace: can talk, not sing.</div>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Alternative: Swim</span><span class="ex-reps">30-40 min</span></div>
+          <div class="ex-note">If pool available. Excellent for fatty liver, zero joint impact.</div>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- DAILY BACK -->
+    <h3 style="margin-top:32px">Daily 5-min back protocol</h3>
+    <p>Every morning, before anything else. Your L4-L5 pain is from weak glutes + tight hip flexors — these fix the root cause.</p>
+    <div class="day open">
+      <div class="day-head" onclick="toggleDay(this)">
+        <div class="day-head-left">
+          <div class="day-num">Every Day · 5 min</div>
+          <div class="day-title">Back Protection</div>
+          <div class="day-meta">Floor / mat · No equipment</div>
+        </div>
+        <div class="chev">⌄</div>
+      </div>
+      <div class="day-body"><div class="day-body-inner">
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Cat-Cow</span><span class="ex-reps">10 slow reps</span></div>
+          <div class="ex-note">Spinal mobility. Move slowly with breath.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=cat+cow+stretch+proper+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Bird Dog</span><span class="ex-reps">8 each, hold 3 sec</span></div>
+          <div class="ex-note">Opposite arm + leg. Deep core activation.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=bird+dog+exercise+proper+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Glute Bridge</span><span class="ex-reps">15 reps</span></div>
+          <div class="ex-note">Squeeze glutes hard at top. Wakes up sleeping muscles.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=glute+bridge+proper+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+        <div class="ex">
+          <div class="ex-top"><span class="ex-name">Dead Bug</span><span class="ex-reps">8 each side</span></div>
+          <div class="ex-note">Press low back into floor throughout.</div>
+          <a class="ex-link" href="https://www.youtube.com/results?search_query=dead+bug+exercise+proper+form" target="_blank" rel="noopener">Watch form</a>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="alert" style="margin-top:24px">
+      <div class="alert-title">⚠ Stop if pain radiates</div>
+      <p>If back pain ever shoots <strong>down your leg</strong> or you feel tingling/numbness, stop and see an orthopaedic doctor immediately. That's a disc issue, not muscular.</p>
+    </div>
+  </section>
+
+  <!-- DIET -->
+  <section id="diet">
+    <div class="sect-num">04 · NUTRITION</div>
+    <h2>2,200 calories. 140g protein. Indian, vegetarian.</h2>
+    <p>Your maintenance is ~2,900 kcal. A 700 kcal/day deficit = ~0.7 kg/week of fat loss without crashing your metabolism. Protein at 1.7g per kg of <em>goal weight</em> (80kg) preserves muscle while you lose fat.</p>
+
+    <h4>Daily macros</h4>
+    <div class="stats">
+      <div class="stat">
+        <div class="k">Protein</div>
+        <div class="v">140<span style="font-size:14px">g</span></div>
+        <div class="target">25%</div>
+      </div>
+      <div class="stat">
+        <div class="k">Carbs</div>
+        <div class="v">220<span style="font-size:14px">g</span></div>
+        <div class="target">40%</div>
+      </div>
+      <div class="stat">
+        <div class="k">Fats</div>
+        <div class="v">85<span style="font-size:14px">g</span></div>
+        <div class="target">35%</div>
+      </div>
+    </div>
+
+    <h4>Daily meal timeline · 1 PM shift</h4>
+    <div class="timeline">
+      <div class="meal">
+        <div class="meal-time">9:30</div>
+        <div class="meal-content">
+          <strong>Wake.</strong> 500ml water + lemon. 10 min sunlight on balcony. Black coffee or chai (last for the day if before 2 PM).
+          <div class="meal-macros">~5 kcal</div>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">10:30</div>
+        <div class="meal-content">
+          <strong>Pre-gym meal.</strong> 1 scoop Nakpro plant protein in water + 1 banana. Or 2 boiled eggs + 1 roti + curd.
+          <div class="meal-macros">~230 kcal · 25g protein</div>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">12:30</div>
+        <div class="meal-content">
+          <strong>Gym.</strong> Per the split above. 60 minutes.
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">3:00</div>
+        <div class="meal-content">
+          <strong>Post-gym.</strong> 1 scoop Nakpro in 250ml milk. Within 30 min of leaving the gym.
+          <div class="meal-macros">~280 kcal · 32g protein</div>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">3:30</div>
+        <div class="meal-content">
+          <strong>Lunch.</strong> 1 katori dal + 1 katori sabzi + 100g paneer or 80g soya chunks + 2 multigrain rotis + curd + salad.
+          <div class="meal-macros">~650 kcal · 45g protein</div>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">5:30</div>
+        <div class="meal-content">
+          <strong>Snack.</strong> 1 small fruit (apple/pear/guava) + 10 almonds + 5 walnuts. <em>No coffee/chai.</em>
+          <div class="meal-macros">~200 kcal · 6g protein</div>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">8:00</div>
+        <div class="meal-content">
+          <strong>Dinner.</strong> 1 katori dal/rajma + big bowl sabzi + 1 roti + curd. <em>Aim for 8 PM. Latest 8:30 PM.</em>
+          <div class="meal-macros">~500 kcal · 25g protein</div>
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">8:30</div>
+        <div class="meal-content">
+          <strong>15-min walk after dinner.</strong> Drops post-meal glucose. Huge for pre-diabetic status.
+        </div>
+      </div>
+      <div class="meal">
+        <div class="meal-time">10:30</div>
+        <div class="meal-content">
+          <strong>If hungry.</strong> Buttermilk (no sugar) with jeera, or chamomile tea. Nothing else.
+          <div class="meal-macros">~50 kcal</div>
+        </div>
+      </div>
+    </div>
+
+    <h4>Cut completely · 12 weeks</h4>
+    <ul>
+      <li>Sugar in tea/coffee (use stevia)</li>
+      <li>Sweets, mithai, biscuits, chocolates, ice cream</li>
+      <li>Fried: samosa, pakora, vada, chips, sev, bhujia</li>
+      <li>Sweetened drinks: fruit juice (even fresh), Coke, sweet lassi</li>
+      <li>Maida: white bread, pav, pizza, naan, kulcha, pasta</li>
+      <li>White rice (use brown rice, quinoa, ragi, foxtail millet)</li>
+      <li><strong>Alcohol · zero · non-negotiable</strong> · ALT 72 makes this critical</li>
+    </ul>
+
+    <h4>Include daily</h4>
+    <ul>
+      <li>3-4 litres water</li>
+      <li>1 cup curd or buttermilk (full-fat OK)</li>
+      <li>1 fistful nuts (almonds, walnuts, pistachios)</li>
+      <li>2 cups cooked vegetables minimum</li>
+      <li>1-2 sources of protein per meal</li>
+    </ul>
+
+    <div class="note">
+      <div class="alert-title">✓ Cheat meal protocol</div>
+      <p>One cheat meal per week — not a cheat day. Sunday lunch ideally. Eat what you want for that single meal, within reason. Restriction without release = relapse.</p>
+    </div>
+  </section>
+
+  <!-- SLEEP -->
+  <section id="sleep">
+    <div class="sect-num">05 · SLEEP RESET</div>
+    <h2>Three weeks. Three habits. One sleep.</h2>
+    <p>Your late-night problem isn't willpower — it's biochemistry. <strong>Caffeine half-life is 5-6 hours.</strong> A 4 PM coffee leaves 50% of the caffeine in your blood at 10 PM. Combined with blue light + scroll-induced dopamine + a sedentary day = your brain literally cannot wind down.</p>
+
+    <h3 style="color:var(--gold)">Week 1 · Caffeine Cutoff</h3>
+    <ul>
+      <li>Morning chai/coffee — fine, even 2 cups</li>
+      <li>Post-lunch (1:30 PM) — one cup if you must, your <strong>last</strong></li>
+      <li>After 2 PM — only water, buttermilk, or herbal tea (chamomile, tulsi, mint)</li>
+      <li>3 PM slump for 3-4 days is normal. Walk it off, splash water on face, push through.</li>
+      <li>Day 5: slump disappears. Your 1 PM gym is your real energy reset.</li>
+    </ul>
+
+    <h3 style="color:var(--gold)">Week 2 · 10-min Wind-Down at 10 PM</h3>
+    <ul>
+      <li>50 slow walking steps inside your house</li>
+      <li>20 bodyweight squats (slow, no rush)</li>
+      <li>10 wall push-ups</li>
+      <li>1-min child's pose stretch</li>
+      <li>1-min legs-up-the-wall (activates parasympathetic / "rest mode")</li>
+    </ul>
+
+    <h3 style="color:var(--gold)">Week 3 · Phone Out of Bedroom</h3>
+    <ul>
+      <li><strong>Buy a ₹400 digital alarm clock</strong> — eliminates the "I need my phone for alarm" excuse</li>
+      <li>Phone charges in living room after 11 PM. Not next to bed.</li>
+      <li>Tell your wife the plan. Ask her to do it too. Couples succeed 3× more.</li>
+      <li>Replace the scroll with a book, Kindle, or talking to your wife.</li>
+      <li>First 3 nights: restless. Day 5: asleep in 20 min. Day 14: this is your default.</li>
+    </ul>
+
+    <h4>Bedtime ladder — push 30 min earlier each week</h4>
+    <div class="ladder">
+      <div class="rung current">
+        <div class="rung-week">Now</div>
+        <div><div class="rung-label">Bedtime</div><div class="rung-val">1-2 AM</div></div>
+        <div><div class="rung-label">Wake</div><div class="rung-val">9-10 AM</div></div>
+      </div>
+      <div class="rung">
+        <div class="rung-week">Wk 1</div>
+        <div><div class="rung-label">Bedtime</div><div class="rung-val">12:30 AM</div></div>
+        <div><div class="rung-label">Wake</div><div class="rung-val">8:30 AM</div></div>
+      </div>
+      <div class="rung">
+        <div class="rung-week">Wk 2</div>
+        <div><div class="rung-label">Bedtime</div><div class="rung-val">12:00 AM</div></div>
+        <div><div class="rung-label">Wake</div><div class="rung-val">8:00 AM</div></div>
+      </div>
+      <div class="rung">
+        <div class="rung-week">Wk 3</div>
+        <div><div class="rung-label">Bedtime</div><div class="rung-val">11:30 PM</div></div>
+        <div><div class="rung-label">Wake</div><div class="rung-val">7:30 AM</div></div>
+      </div>
+      <div class="rung target">
+        <div class="rung-week">Wk 4+</div>
+        <div><div class="rung-label">Bedtime</div><div class="rung-val">11:00 PM</div></div>
+        <div><div class="rung-label">Wake</div><div class="rung-val">7:00 AM</div></div>
+      </div>
+    </div>
+
+    <p>Trying to jump from 2 AM to 11 PM overnight will fail. Your circadian rhythm needs 30-minute increments.</p>
+  </section>
+
+  <!-- DAILY -->
+  <section id="daily">
+    <div class="sect-num">06 · MONDAY ONWARD</div>
+    <h2>What your day looks like.</h2>
+    <p>One screen. Everything you do. Save this as a home-screen bookmark on your phone.</p>
+
+    <div class="schedule">
+      <div class="slot"><div class="slot-time">9:30 AM</div><div class="slot-action"><strong>Wake.</strong> Water + lemon. 10 min sunlight on balcony. Back protocol (5 min).</div></div>
+      <div class="slot"><div class="slot-time">10:30 AM</div><div class="slot-action"><strong>Pre-gym meal.</strong> Protein shake + banana, OR eggs + roti + curd.</div></div>
+      <div class="slot"><div class="slot-time">12:30 PM</div><div class="slot-action"><strong>Gym.</strong> Today's split. 60 min total.</div></div>
+      <div class="slot"><div class="slot-time">2:00 PM</div><div class="slot-action"><strong>Last caffeine of the day.</strong> If you want it. Otherwise stay off.</div></div>
+      <div class="slot"><div class="slot-time">3:00 PM</div><div class="slot-action"><strong>Post-gym shake.</strong> Then start work.</div></div>
+      <div class="slot"><div class="slot-time">3:30 PM</div><div class="slot-action"><strong>Real lunch.</strong> Dal + sabzi + paneer + 2 rotis + curd + salad.</div></div>
+      <div class="slot"><div class="slot-time">5:30 PM</div><div class="slot-action"><strong>Snack.</strong> Fruit + nuts. No chai/coffee.</div></div>
+      <div class="slot"><div class="slot-time">8:00 PM</div><div class="slot-action"><strong>Dinner.</strong> Dal/rajma + big sabzi + 1 roti + curd.</div></div>
+      <div class="slot"><div class="slot-time">8:30 PM</div><div class="slot-action"><strong>15-min walk.</strong> Even inside the apartment.</div></div>
+      <div class="slot"><div class="slot-time">10:00 PM</div><div class="slot-action"><strong>10-min wind-down.</strong> Squats, push-ups, child pose, legs-up-wall.</div></div>
+      <div class="slot"><div class="slot-time">11:00 PM</div><div class="slot-action"><strong>Phone to living room.</strong> Charge it there. Not in bedroom.</div></div>
+      <div class="slot"><div class="slot-time">11:30 PM</div><div class="slot-action"><strong>In bed.</strong> Book or lights off. Target asleep by 12:30 AM in week 1.</div></div>
+    </div>
+  </section>
+
+  <!-- TRACKING -->
+  <section id="track">
+    <div class="sect-num">07 · MEASURE</div>
+    <h2>Sunday morning, every week.</h2>
+    <p>Same conditions every Sunday: post-toilet, pre-food, no clothes. Trends matter, not single readings.</p>
+
+    <h4>What to log</h4>
+    <ul>
+      <li><strong>Weight</strong> — digital scale</li>
+      <li><strong>Waist</strong> — tape at belly button, exhale, don't suck in</li>
+      <li><strong>Chest</strong> — at nipple line, arms down</li>
+      <li><strong>Hip</strong> — widest point, feet together</li>
+      <li><strong>Photos</strong> — front, side, back. Same shorts, same room.</li>
+      <li><strong>Energy 1-10</strong> — how did the week feel?</li>
+      <li><strong>Sleep avg</strong> — from your simple log</li>
+      <li><strong>Adherence %</strong> — what % of meals were on plan? Aim 85%+</li>
+    </ul>
+
+    <h4>Re-test labs at week 12</h4>
+    <p>Apollo / Thyrocare / 1mg — ₹2,500-3,500 in Bangalore. Order:</p>
+    <ul>
+      <li>Fasting glucose + HbA1c</li>
+      <li>ALT, AST, GGT (liver)</li>
+      <li>Full lipid profile (Total chol, LDL, HDL, Trigs)</li>
+      <li>Vitamin D 25-OH</li>
+      <li>hs-CRP</li>
+    </ul>
+
+    <div class="pull-quote">
+      You gained 27 kg in 24 months.<br>
+      We can lose the first <em>10 kg</em> in 12 weeks if you execute.
+    </div>
+  </section>
+
+  <!-- PITFALLS -->
+  <section id="pitfalls">
+    <div class="sect-num">08 · FAILURE MODES</div>
+    <h2>Pre-empting your failure points.</h2>
+    <ul>
+      <li><strong>Week 3-4 plateau:</strong> Will happen. Water retention from new training. Don't panic, don't cut calories more. Hold the line.</li>
+      <li><strong>Wife/family pushback:</strong> "Beta itna mat khao." Eat your dinner first, then sit at the table.</li>
+      <li><strong>Wedding / festival season:</strong> Pre-decide one indulgence meal. Not a 3-day binge.</li>
+      <li><strong>Work travel:</strong> Carry whey + nuts. Hotel breakfast: omelette/paneer + curd + 1 fruit. Skip the buffet bread.</li>
+      <li><strong>Late-night work calls past 11 PM:</strong> Allow buttermilk + handful nuts. Not a full meal.</li>
+      <li><strong>2 kg "gain" overnight:</strong> Salt, water, glycogen. Look at WEEKLY average, not daily.</li>
+      <li><strong>Stress eating urge:</strong> 20 push-ups, 500ml water, wait 15 min. Urge passes 80% of time.</li>
+      <li><strong>Caffeine withdrawal day 2-3:</strong> Real, lasts 3-4 days. Walks + water. Don't break.</li>
+      <li><strong>Long-distance driving:</strong> Lumbar cushion. 5-min break every hour. Protect the L4-L5.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <div class="alert">
+      <div class="alert-title">⚠ Stop & see a doctor immediately if</div>
+      <p>Back pain shoots down your leg · Tingling or numbness anywhere · Chest discomfort during cardio · Persistent dizziness · Vision changes · Any new lump or unusual symptom. None of these are normal "fitness adaptation."</p>
+    </div>
+
+    <p style="text-align:center; margin-top:32px; color:var(--ink-3); font-family:var(--mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase;">
+      End of plan · Foundation phase
+    </p>
+    <p style="text-align:center; color:var(--gold); font-family:var(--serif); font-style:italic; font-size:20px; margin-top:16px;">
+      Now stop reading. Start executing.
+    </p>
+  </section>
+
+</main>
+
+<nav class="bottom">
+  <a href="#top"><span class="icon">↑</span>Top</a>
+  <a href="#gym"><span class="icon">◆</span>Gym</a>
+  <a href="#diet"><span class="icon">◇</span>Food</a>
+  <a href="#sleep"><span class="icon">☾</span>Sleep</a>
+  <a href="#daily"><span class="icon">○</span>Day</a>
+  <a href="#track"><span class="icon">▣</span>Track</a>
+</nav>
+
+<script>
+  function toggleDay(headEl) {
+    const day = headEl.parentElement;
+    day.classList.toggle('open');
+  }
+
+  // Smooth scroll for nav
+  document.querySelectorAll('nav.bottom a').forEach(a => {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
